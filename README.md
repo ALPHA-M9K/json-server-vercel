@@ -1,45 +1,38 @@
-## Deploy JSON Server to Vercel
 
-A template to deploy [JSON Server](https://github.com/typicode/json-server) to [Vercel](https://vercel.com), allow you to run fake REST API online!
+# Project Name
+Wk3 Code Challenge
 
-Demo from this repository: 
+## Overview
+Flatdango is a web application for purchasing movie tickets. It allows users to view a list of movies, see detailed information about each movie, and purchase tickets if available.
 
-1. https://json-server-in.vercel.app
-2. https://json-server-in.vercel.app/api/posts
+## Project Structure
+- `index.html` - The main HTML file that provides the structure of the application.
+- `style.css` - The stylesheet that defines the appearance of the application.
+- `index.js` - The JavaScript file containing the functionality for fetching movie data, displaying movie details, and handling ticket purchases.
+- `db.json` - Contains sample movie data for the application.
 
-![Powered by Vercel](https://images.ctfassets.net/e5382hct74si/78Olo8EZRdUlcDUFQvnzG7/fa4cdb6dc04c40fceac194134788a0e2/1618983297-powered-by-vercel.svg)
+## Features
+- Movie Menu: Displays a list of movies available for viewing.
+- Movie Details: Shows detailed information about a selected movie, including the poster, runtime, showtime, available tickets, and a description.
+-Ticket Purchase: Allows users to purchase tickets for a movie, with the button becoming disabled and labeled "Sold Out" when tickets are no longer available.
 
-### How to use
+## JSON Data
+The `db.json` file includes the following movie details:
 
-1. Click "**Use this template**" or clone this repository.
-2. Update or use the default [`db.json`](./db.json) in the repository.
-3. Sign Up or login into [Vercel](https://vercel.com).
-4. From the Vercel dashboard, click "**+ New Project**" then "**Import**" your repository.
-5. In the "**Configure Project**" screen, leave everything default and click "**Deploy**".
-6. Wait until deployment is done, and your own JSON server is ready to serve!
+- **ID**: Unique identifier for each movie.
+- **Title**: The title of the movie.
+- **Runtime**: Duration of the movie in minutes.
+- **Capacity**: Total number of tickets available.
+- **Showtime**: The showtime of the movie.
+- **Tickets Sold**: Number of tickets that have already been sold.
+- **Description**: A brief description of the movie.
+- **Poster**: URL to the movie's poster image.
 
-## Default `db.json`
+## Installation
+Clone the Repository
+Ensure you have a local server running at http://localhost:3000 with endpoints for /films and /films/{id}.
 
-```json
-{
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
-}
-```
 
-## Enable write operations
+## Usage
+Open index.html in your browser. The application should load and display the movie menu and details as described.
 
-By default, only GET operation is allowed, thanks to the contribution by [@VicAv99](https://www.github.com/VicAv99) at [#6](https://github.com/kitloong/json-server-vercel/issues/6), we can now enable write operations as well.
-
-You can find the example code in [`api/server.js`](./api/server.js).
-
-## Reference
-
-1. https://github.com/typicode/json-server
-2. https://vercel.com
-3. https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
